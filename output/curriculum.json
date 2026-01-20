@@ -1,0 +1,653 @@
+{
+  "title": "AWS Solutions Architect Associate (SAA-C03) 학습 과정",
+  "total_weeks": 4,
+  "days_per_week": 5,
+  "total_services": 75,
+  "weeks": [
+    {
+      "week": 1,
+      "title": "AWS 기초, IAM & 컴퓨팅",
+      "description": "AWS 클라우드의 기본 개념, 보안 기초, 핵심 컴퓨팅 서비스",
+      "learning_objectives": [
+        "IAM 사용자 및 역할 관리, 정책 설정을 통해 보안을 구현할 수 있는 능력을 배양합니다.",
+        "EC2 인스턴스 생성 및 관리, Security Groups 및 EBS를 활용한 데이터 저장 구조를 설계할 수 있습니다.",
+        "VPC 네트워크 구성, ELB로 트래픽 분산, Auto Scaling을 통한 자동 확장 기능을 실습적으로 적용할 수 있습니다."
+      ],
+      "core_services": [
+        "IAM",
+        "EC2",
+        "VPC",
+        "ELB",
+        "Auto Scaling",
+        "EBS",
+        "AMI",
+        "Security Groups"
+      ],
+      "days": [
+        {
+          "day": 1,
+          "title": "AWS 클라우드 개요 & IAM 기초",
+          "core_services": [
+            "AWS Global Infrastructure",
+            "IAM"
+          ],
+          "topics": [
+            "리전/AZ/엣지 로케이션",
+            "IAM 사용자/그룹/역할",
+            "IAM 정책",
+            "MFA",
+            "AWS Organizations"
+          ],
+          "key_concepts": [
+            "AWS Regions and Availability Zones",
+            "IAM Users vs. Roles",
+            "IAM Policies (including Managed and Inline Policies)",
+            "AWS Organizations",
+            "Multi-Factor Authentication (MFA)"
+          ],
+          "practice": "AWS Global Infrastructure, IAM 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "AWS Global Infrastructure 기본 구성 및 설정",
+          "duration_hours": 2
+        },
+        {
+          "day": 2,
+          "title": "IAM 심화 & 보안",
+          "core_services": [
+            "IAM",
+            "AWS Organizations",
+            "AWS Control Tower"
+          ],
+          "topics": [
+            "IAM 역할 위임",
+            "STS",
+            "자격 증명 연동",
+            "서비스 연결 역할",
+            "권한 경계",
+            "SCP"
+          ],
+          "key_concepts": [
+            "IAM 역할 위임 및 trust 정책",
+            "STS 서비스로의 임시 자격 증명 생성",
+            "서비스 연결 역할(Service Linked Role) 구성",
+            "권한 경계(Permission Boundary) 적용",
+            "SCP(Service Control Policy) 정책 관리"
+          ],
+          "practice": "IAM, AWS Organizations 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "IAM 사용자와 역할을 생성하고 최소 권한 정책 적용",
+          "duration_hours": 2
+        },
+        {
+          "day": 3,
+          "title": "EC2 기초",
+          "core_services": [
+            "EC2",
+            "AMI",
+            "EBS"
+          ],
+          "topics": [
+            "인스턴스 유형",
+            "구매 옵션(온디맨드/예약/스팟/전용)",
+            "AMI",
+            "사용자 데이터",
+            "인스턴스 메타데이터"
+          ],
+          "key_concepts": [
+            "인스턴스 유형",
+            "구매 옵션(온디맨드/예약/스팟/전용)",
+            "AMI"
+          ],
+          "practice": "EC2, AMI 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "EC2 인스턴스를 생성하고 SSH로 접속하여 웹서버 구성",
+          "duration_hours": 2
+        },
+        {
+          "day": 4,
+          "title": "EC2 스토리지 & 네트워킹",
+          "core_services": [
+            "EBS",
+            "EFS",
+            "Instance Store",
+            "Security Groups"
+          ],
+          "topics": [
+            "EBS 볼륨 유형(gp3/io2/st1/sc1)",
+            "EBS 스냅샷",
+            "EFS",
+            "Instance Store",
+            "보안 그룹",
+            "ENI"
+          ],
+          "key_concepts": [
+            "EBS 볼륨 유형 차이 (gp3/io2/st1/sc1)",
+            "EBS 스냅샷 원리 및 관리",
+            "보안 그룹 규칙 및 트래픽 제어",
+            "EFS 파일 시스템 구성 및 특징",
+            "Instance Store vs EBS 차이"
+          ],
+          "practice": "EBS, EFS 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "EBS 기본 구성 및 설정",
+          "duration_hours": 2
+        },
+        {
+          "day": 5,
+          "title": "고가용성 & 확장성",
+          "core_services": [
+            "ELB",
+            "Auto Scaling",
+            "Launch Templates"
+          ],
+          "topics": [
+            "ALB/NLB/GLB/CLB",
+            "대상 그룹",
+            "상태 검사",
+            "Auto Scaling 그룹",
+            "조정 정책",
+            "시작 템플릿"
+          ],
+          "key_concepts": [
+            "ALB/NLB/GLB/CLB 차이점",
+            "대상 그룹( Target Group ) 구성 및 상태 검사",
+            "Auto Scaling 그룹(Auto Scaling Group) 운영 원리",
+            "조정 정책(Scaling Policy) 타입 및 트리거 조건",
+            "Launch Templates의 인스턴스 구성 정의 방법"
+          ],
+          "practice": "ELB, Auto Scaling 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "ELB 기본 구성 및 설정",
+          "duration_hours": 2
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "title": "네트워킹 & 스토리지",
+      "description": "VPC 네트워킹 심화와 다양한 스토리지 서비스",
+      "learning_objectives": [
+        "VPC 네트워크 아키텍처 설계 및 보안 정책 구현",
+        "S3 버킷 관리 및 CloudFront를 활용한 콘텐츠 전달 최적화",
+        "Global Accelerator의 글로벌 트래픽 관리 및 Storage Gateway의 하이브리드 스토리지 솔루션 통합"
+      ],
+      "core_services": [
+        "VPC",
+        "S3",
+        "Route 53",
+        "CloudFront",
+        "Global Accelerator",
+        "Storage Gateway"
+      ],
+      "days": [
+        {
+          "day": 1,
+          "title": "VPC 기초",
+          "core_services": [
+            "VPC",
+            "Subnet",
+            "Internet Gateway",
+            "NAT Gateway"
+          ],
+          "topics": [
+            "VPC CIDR",
+            "퍼블릭/프라이빗 서브넷",
+            "라우팅 테이블",
+            "인터넷 게이트웨이",
+            "NAT 게이트웨이/인스턴스"
+          ],
+          "key_concepts": [
+            "VPC CIDR",
+            "퍼블릭/프라이빗 서브넷 구분",
+            "라우팅 테이블 구성",
+            "인터넷 게이트웨이 역할",
+            "NAT 게이트웨이 vs NAT 인스턴스"
+          ],
+          "practice": "VPC, Subnet 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "퍼블릭/프라이빗 서브넷이 있는 VPC 구성",
+          "duration_hours": 2
+        },
+        {
+          "day": 2,
+          "title": "VPC 심화",
+          "core_services": [
+            "VPC Peering",
+            "Transit Gateway",
+            "VPC Endpoints",
+            "PrivateLink"
+          ],
+          "topics": [
+            "VPC 피어링",
+            "Transit Gateway",
+            "VPC 엔드포인트(게이트웨이/인터페이스)",
+            "PrivateLink",
+            "VPN",
+            "Direct Connect"
+          ],
+          "key_concepts": [
+            "VPC 피어링 연결 및 라우팅 테이블 설정",
+            "트랜지트 게이트웨이의 중앙 집중형 네트워크 연결",
+            "VPC 게이트웨이 엔드포인트 vs 인터페이스 엔드포인트 차이",
+            "PrivateLink의 프라이빗 연결 구조",
+            "Direct Connect의 전용 네트워크 인터페이스 구성"
+          ],
+          "practice": "VPC Peering, Transit Gateway 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "VPC Peering 기본 구성 및 설정",
+          "duration_hours": 2
+        },
+        {
+          "day": 3,
+          "title": "VPC 보안 & 모니터링",
+          "core_services": [
+            "NACL",
+            "Security Groups",
+            "VPC Flow Logs",
+            "Network Firewall"
+          ],
+          "topics": [
+            "NACL vs 보안 그룹",
+            "VPC 흐름 로그",
+            "Network Firewall",
+            "WAF",
+            "Shield",
+            "Firewall Manager"
+          ],
+          "key_concepts": [
+            "NACL vs Security Groups",
+            "VPC Flow Logs",
+            "Network Firewall"
+          ],
+          "practice": "NACL, Security Groups 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "NACL 기본 구성 및 설정",
+          "duration_hours": 2
+        },
+        {
+          "day": 4,
+          "title": "S3 기초 & 보안",
+          "core_services": [
+            "S3",
+            "S3 Glacier"
+          ],
+          "topics": [
+            "버킷 정책",
+            "ACL",
+            "S3 암호화(SSE-S3/SSE-KMS/SSE-C)",
+            "버전 관리",
+            "MFA Delete",
+            "S3 Object Lock"
+          ],
+          "key_concepts": [
+            "버킷 정책(Bucket Policy)",
+            "ACL(Access Control List)",
+            "SSE-KMS 암호화",
+            "버전 관리(Versioning)",
+            "MFA Delete"
+          ],
+          "practice": "S3, S3 Glacier 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "S3 버킷 생성 및 버킷 정책, 암호화 설정",
+          "duration_hours": 2
+        },
+        {
+          "day": 5,
+          "title": "S3 심화 & CDN",
+          "core_services": [
+            "S3",
+            "CloudFront",
+            "Route 53",
+            "Global Accelerator"
+          ],
+          "topics": [
+            "S3 스토리지 클래스",
+            "수명주기 정책",
+            "S3 복제(CRR/SRR)",
+            "CloudFront 배포",
+            "Route 53 라우팅 정책",
+            "Global Accelerator"
+          ],
+          "key_concepts": [
+            "S3 스토리지 클래스",
+            "S3 수명주기 정책",
+            "S3 크로스 리전 복제(CRR)",
+            "CloudFront 배포",
+            "Route 53 라우팅 정책"
+          ],
+          "practice": "S3, CloudFront 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "S3 버킷 생성 및 버킷 정책, 암호화 설정",
+          "duration_hours": 2
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "title": "데이터베이스 & 서버리스",
+      "description": "관리형 데이터베이스 서비스와 서버리스 아키텍처",
+      "learning_objectives": [
+        "RDS, Aurora, DynamoDB, 및 ElastiCache의 차이점과 적절한 사용 시나리오를 이해하고 실제 환경에서 구성할 수 있다",
+        "Lambda, API Gateway, Step Functions을 활용한 서버리스 아키텍처 설계 및 데이터베이스와의 통합 방안을 제시할 수 있다",
+        "서버리스 환경에서 데이터베이스 백엔드와의 상호작용을 최적화하는 아키텍처 패턴을 설계하고, 성능/비용 측면에서의 Trade-off를 분석할 수 있다"
+      ],
+      "core_services": [
+        "RDS",
+        "Aurora",
+        "DynamoDB",
+        "ElastiCache",
+        "Lambda",
+        "API Gateway",
+        "Step Functions"
+      ],
+      "days": [
+        {
+          "day": 1,
+          "title": "RDS & Aurora",
+          "core_services": [
+            "RDS",
+            "Aurora"
+          ],
+          "topics": [
+            "RDS 다중 AZ",
+            "읽기 전용 복제본",
+            "RDS Proxy",
+            "Aurora 클러스터",
+            "Aurora Serverless",
+            "Aurora Global Database"
+          ],
+          "key_concepts": [
+            "RDS 다중 AZ 배포의 고가용성 및 재해 복구 메커니즘",
+            "읽기 전용 복제본의 읽기 확장 및 데이터 동기화 방식",
+            "RDS Proxy의 연결 풀링과 연결 관리 기능",
+            "Aurora 클러스터의 마스터-슬레이브 아키텍처 및 자동 백업",
+            "Aurora Global Database의 글로벌 데이터 동기화 및 지역 복제본 관리"
+          ],
+          "practice": "RDS, Aurora 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "Multi-AZ RDS 인스턴스 생성 및 읽기 전용 복제본 구성",
+          "duration_hours": 2
+        },
+        {
+          "day": 2,
+          "title": "DynamoDB",
+          "core_services": [
+            "DynamoDB",
+            "DAX",
+            "DynamoDB Streams"
+          ],
+          "topics": [
+            "파티션 키/정렬 키",
+            "GSI/LSI",
+            "용량 모드(프로비저닝/온디맨드)",
+            "DAX",
+            "DynamoDB Streams",
+            "글로벌 테이블",
+            "TTL"
+          ],
+          "key_concepts": [
+            "Partition Key/Sort Key",
+            "Global Secondary Index (GSI)",
+            "Capacity Modes (Provisioned/On-Demand)",
+            "DAX",
+            "DynamoDB Streams"
+          ],
+          "practice": "DynamoDB, DAX 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "DynamoDB 기본 구성 및 설정",
+          "duration_hours": 2
+        },
+        {
+          "day": 3,
+          "title": "기타 데이터베이스 서비스",
+          "core_services": [
+            "ElastiCache",
+            "Redshift",
+            "Neptune",
+            "DocumentDB",
+            "Keyspaces",
+            "QLDB",
+            "Timestream"
+          ],
+          "topics": [
+            "ElastiCache Redis/Memcached",
+            "Redshift",
+            "Neptune",
+            "DocumentDB",
+            "Amazon Keyspaces",
+            "QLDB",
+            "Timestream"
+          ],
+          "key_concepts": [
+            "ElastiCache Redis/Memcached의 차이점",
+            "Redshift의 데이터 웨어하우스 아키텍처",
+            "Neptune의 그래프 데이터베이스 및 SPARQL 쿼리",
+            "DocumentDB의 문서 모델과 스케일링",
+            "Amazon Keyspaces의 서버리스 아키텍처",
+            "QLDB의 불변성 및 트랜잭션 로그",
+            "Timestream의 시간 시리즈 데이터 처리"
+          ],
+          "practice": "ElastiCache, Redshift 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "ElastiCache 기본 구성 및 설정",
+          "duration_hours": 2
+        },
+        {
+          "day": 4,
+          "title": "Lambda & 서버리스",
+          "core_services": [
+            "Lambda",
+            "API Gateway",
+            "SAM"
+          ],
+          "topics": [
+            "Lambda 함수",
+            "실행 역할",
+            "VPC 내 Lambda",
+            "Lambda@Edge",
+            "API Gateway REST/HTTP/WebSocket",
+            "Lambda 계층"
+          ],
+          "key_concepts": [
+            "Lambda 실행 역할",
+            "VPC 내 Lambda 배포",
+            "Lambda@Edge 아키텍처",
+            "API Gateway REST/HTTP/WebSocket 차이",
+            "Lambda 계층 구조"
+          ],
+          "practice": "Lambda, API Gateway 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "Lambda 함수 생성 및 API Gateway 연동",
+          "duration_hours": 2
+        },
+        {
+          "day": 5,
+          "title": "서버리스 심화",
+          "core_services": [
+            "Step Functions",
+            "EventBridge",
+            "SQS",
+            "SNS",
+            "Kinesis"
+          ],
+          "topics": [
+            "Step Functions",
+            "EventBridge",
+            "SQS 표준/FIFO",
+            "SNS",
+            "Kinesis Data Streams/Firehose/Analytics"
+          ],
+          "key_concepts": [
+            "Step Functions 상태 머신과 워크플로우 오케스트레이션",
+            "EventBridge 이벤트 패턴과 룰 생성",
+            "SQS 표준/FIFO 큐의 메시지 순서 보장",
+            "SNS 토픽 구독과 메시지 전달",
+            "Kinesis Data Streams 샤드와 데이터 인그레션"
+          ],
+          "practice": "Step Functions, EventBridge 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "Step Functions 기본 구성 및 설정",
+          "duration_hours": 2
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "title": "컨테이너, 보안 & 아키텍처",
+      "description": "컨테이너 서비스, 보안 서비스, 모니터링 및 Well-Architected",
+      "learning_objectives": [
+        "컨테이너 오케스트레이션 서비스(ECS, EKS, Fargate)를 활용한 애플리케이션 배포 및 관리 능력 확보",
+        "KMS, Secrets Manager, CloudTrail, Config를 활용한 보안 정책 구현 및 리소스 모니터링 역량 강화",
+        "CloudWatch를 통한 컨테이너 환경의 로그 분석 및 아키텍처 최적화 전략 설계 능력 개발"
+      ],
+      "core_services": [
+        "ECS",
+        "EKS",
+        "Fargate",
+        "ECR",
+        "KMS",
+        "Secrets Manager",
+        "CloudWatch",
+        "CloudTrail",
+        "Config"
+      ],
+      "days": [
+        {
+          "day": 1,
+          "title": "컨테이너 서비스",
+          "core_services": [
+            "ECS",
+            "EKS",
+            "Fargate",
+            "ECR",
+            "App Runner",
+            "Copilot"
+          ],
+          "topics": [
+            "ECS 클러스터/서비스/태스크",
+            "EKS",
+            "Fargate",
+            "ECR",
+            "App Runner",
+            "ECS Anywhere"
+          ],
+          "key_concepts": [
+            "ECS 클러스터 구성 및 관리",
+            "EKS 컨트롤 플레인 및 노드 그룹",
+            "Fargate 자동 확장 및 리소스 관리",
+            "ECR 이미지 보안 및 IAM 정책",
+            "ECS Anywhere 하이브리드 배포"
+          ],
+          "practice": "ECS, EKS 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "ECS 클러스터 생성 및 Fargate 태스크 배포",
+          "duration_hours": 2
+        },
+        {
+          "day": 2,
+          "title": "보안 서비스",
+          "core_services": [
+            "KMS",
+            "CloudHSM",
+            "Secrets Manager",
+            "Parameter Store",
+            "ACM",
+            "Macie"
+          ],
+          "topics": [
+            "KMS CMK",
+            "봉투 암호화",
+            "CloudHSM",
+            "Secrets Manager 자동 교체",
+            "Parameter Store",
+            "ACM",
+            "Macie"
+          ],
+          "key_concepts": [
+            "KMS CMK 관리 및 회전",
+            "봉투 암호화(Envelope Encryption) 메커니즘",
+            "Secrets Manager 자동 교체 정책",
+            "CloudHSM 하드웨어 보안 모듈 활용",
+            "ACM 인증서 자동화 및 통합"
+          ],
+          "practice": "KMS, CloudHSM 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "KMS 기본 구성 및 설정",
+          "duration_hours": 2
+        },
+        {
+          "day": 3,
+          "title": "보안 & 거버넌스",
+          "core_services": [
+            "GuardDuty",
+            "Inspector",
+            "Security Hub",
+            "Detective",
+            "Config",
+            "CloudTrail"
+          ],
+          "topics": [
+            "GuardDuty",
+            "Inspector",
+            "Security Hub",
+            "Detective",
+            "Config Rules",
+            "CloudTrail",
+            "Trusted Advisor"
+          ],
+          "key_concepts": [
+            "GuardDuty의 위협 탐지 및 머신러닝 기반 분석",
+            "Security Hub의 통합 보안 데이터 수집 및 위험 분류",
+            "Config Rules의 자동화된 보안 준수 검증 및 정책 적용"
+          ],
+          "practice": "GuardDuty, Inspector 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "GuardDuty 기본 구성 및 설정",
+          "duration_hours": 2
+        },
+        {
+          "day": 4,
+          "title": "모니터링 & 로깅",
+          "core_services": [
+            "CloudWatch",
+            "X-Ray",
+            "CloudTrail",
+            "Athena",
+            "OpenSearch"
+          ],
+          "topics": [
+            "CloudWatch 지표/로그/경보/대시보드",
+            "CloudWatch Logs Insights",
+            "X-Ray",
+            "Athena로 로그 분석",
+            "OpenSearch"
+          ],
+          "key_concepts": [
+            "CloudWatch Metrics and Alarms",
+            "CloudWatch Logs Insights Query Syntax",
+            "X-Ray Tracing and Sampling",
+            "Athena Log Analysis with S3",
+            "OpenSearch Log Search and Analytics"
+          ],
+          "practice": "CloudWatch, X-Ray 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "CloudWatch 대시보드 및 경보 설정",
+          "duration_hours": 2
+        },
+        {
+          "day": 5,
+          "title": "IaC & Well-Architected",
+          "core_services": [
+            "CloudFormation",
+            "CDK",
+            "Systems Manager",
+            "Well-Architected Framework"
+          ],
+          "topics": [
+            "CloudFormation 스택/중첩 스택",
+            "CDK",
+            "Systems Manager",
+            "Well-Architected 6대 원칙",
+            "비용 최적화",
+            "DR 전략"
+          ],
+          "key_concepts": [
+            "Nested Stacks in CloudFormation",
+            "AWS CDK Constructs and Declarative Infrastructure",
+            "Systems Manager State Manager",
+            "Well-Architected 6 Pillars",
+            "Cost Optimization with Reserved Instances"
+          ],
+          "practice": "CloudFormation, CDK 서비스 콘솔 및 CLI 실습",
+          "practice_goal": "CloudFormation 기본 구성 및 설정",
+          "duration_hours": 2
+        }
+      ]
+    }
+  ],
+  "_metadata": {
+    "generated_at": "2026-01-17T14:42:14.026618",
+    "version": "1.0"
+  }
+}
