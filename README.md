@@ -13,30 +13,33 @@ LangGraph 기반 멀티 에이전트 시스템으로 AWS 학습 강의자료를 
 
 ## 아키텍처
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                         Gradio UI                                │
-└─────────────────────────────────────────────────────────────────┘
-                                │
-                                ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    LangGraph Orchestrator                        │
-│  ┌─────────────────────────────────────────────────────────────┐ │
-│  │                    Supervisor Agent                          │ │
-│  └─────────────────────────────────────────────────────────────┘ │
-│         │           │           │           │           │        │
-│         ▼           ▼           ▼           ▼           ▼        │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐│
-│  │Curriculum│ │ Content  │ │   Web    │ │   RAG    │ │  Review  ││
-│  │ Designer │ │Generator │ │ Searcher │ │ Searcher │ │  Agent   ││
-│  └──────────┘ └──────────┘ └──────────┘ └──────────┘ └──────────┘│
-└─────────────────────────────────────────────────────────────────┘
-         │                         │                    │
-         ▼                         ▼                    ▼
-┌─────────────┐           ┌─────────────┐       ┌─────────────┐
-│   Ollama    │           │  ChromaDB   │       │ MCP Servers │
-│  (qwen3:8b) │           │ (Vector DB) │       │             │
-└─────────────┘           └─────────────┘       └─────────────┘
+```mermaid
+flowchart TB
+    subgraph UI["Gradio UI"]
+        UI_Layer["웹 인터페이스"]
+    end
+
+    subgraph Orchestrator["LangGraph Orchestrator"]
+        Supervisor["Supervisor Agent"]
+        Supervisor --> Curriculum["Curriculum<br/>Designer"]
+        Supervisor --> Content["Content<br/>Generator"]
+        Supervisor --> WebSearch["Web<br/>Searcher"]
+        Supervisor --> RAGSearch["RAG<br/>Searcher"]
+        Supervisor --> Review["Review<br/>Agent"]
+    end
+
+    subgraph Infrastructure["Infrastructure"]
+        Ollama["Ollama<br/>(qwen3:8b)"]
+        ChromaDB["ChromaDB<br/>(Vector DB)"]
+        MCP["MCP Servers"]
+    end
+
+    UI_Layer --> Supervisor
+    Curriculum --> Ollama
+    Content --> Ollama
+    WebSearch --> MCP
+    RAGSearch --> ChromaDB
+    Review --> Ollama
 ```
 
 ## 에이전트 구성
@@ -234,7 +237,7 @@ pytest --cov=src --cov-report=html
 
 ## 기술 스택
 
-- **LLM**: Ollama (qwen2.5)
+- **LLM**: Ollama (qwen3:8b)
 - **오케스트레이션**: LangGraph
 - **Vector DB**: ChromaDB
 - **UI**: Gradio
